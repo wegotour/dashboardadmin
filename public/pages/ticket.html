@@ -118,7 +118,7 @@
                     </path>
                   </svg>
                 </span>
-                <span class="ml-2 text-sm"> Form Katalog </span>
+                <span class="ml-2 text-sm"> Form Ticket </span>
                 </span>
               </a>
               <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components">
@@ -130,7 +130,7 @@
             <!--  Tempat Catalog -->
             <div x-data="{ isActive: false, open: false }">
               <!-- active classes 'bg-primary-100 dark:bg-primary' -->
-              <a href="./katalog.html"
+              <a href="./ticket.html"
                 class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
                 :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button" aria-haspopup="true"
                 :aria-expanded="(open || isActive) ? 'true' : 'false'">
@@ -414,7 +414,7 @@
               <!--  Tempat Catalog -->
               <div x-data="{ isActive: false, open: false }">
                 <!-- active classes 'bg-primary-100 dark:bg-primary' -->
-                <a href="./katalog.html"
+                <a href="./ticket.html"
                   class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
                   :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button" aria-haspopup="true"
                   :aria-expanded="(open || isActive) ? 'true' : 'false'">
@@ -466,7 +466,7 @@
         <main x-data="{ isFormOpen: false, isUpdateFormOpen:false }">
           <div class="flex items-center justify-between px-4 py-4 border-b lg:py-6 dark:border-primary-darker">
             <!-- Content header -->
-            <h1 class="text-2xl font-semibold">Katalog</h1>
+            <h1 class="text-2xl font-semibold">Ticket</h1>
           </div>
           <!--- Tabel -->
           <div class="w-full lg:w-5/6 mx-auto">
