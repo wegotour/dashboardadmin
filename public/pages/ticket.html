@@ -102,10 +102,10 @@
               </div>
             </div>
 
-            <!--  Tempat Catalog -->
+            <!--  Tempat Ticket -->
             <div x-data="{ isActive: false, open: false }">
               <!-- active classes 'bg-primary-100 dark:bg-primary' -->
-              <a href="./formedit_catalog.html"
+              <a href="./formedit_ticket.html"
                 class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
                 :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button" aria-haspopup="true"
                 :aria-expanded="(open || isActive) ? 'true' : 'false'">
@@ -127,7 +127,7 @@
               </div>
             </div>
 
-            <!--  Tempat Catalog -->
+            <!--  Tempat Ticket -->
             <div x-data="{ isActive: false, open: false }">
               <!-- active classes 'bg-primary-100 dark:bg-primary' -->
               <a href="./ticket.html"
@@ -143,7 +143,7 @@
                     </path>
                   </svg>
                 </span>
-                <span class="ml-2 text-sm"> Catalog </span>
+                <span class="ml-2 text-sm"> Ticket </span>
                 </span>
               </a>
               <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components">
@@ -197,7 +197,7 @@
             <!-- Brand -->
             <a href="index.html"
               class="inline-block text-2xl font-bold tracking-wider uppercase text-primary-dark dark:text-light">
-              Pasabar
+              Wegotour
             </a>
 
             <!-- Mobile sub menu button -->
@@ -263,7 +263,7 @@
                   aria-haspopup="true" :aria-expanded="open ? 'true' : 'false'"
                   class="transition-opacity duration-200 rounded-full dark:opacity-75 dark:hover:opacity-100 focus:outline-none focus:ring dark:focus:opacity-100">
                   <span class="sr-only">User menu</span>
-                  <img class="w-10 h-10 rounded-full" src="./public/build/images/wegotour.png" alt="Pasabar" />
+                  <img class="w-10 h-10 rounded-full" src="./public/build/images/wegotour.png" alt="Wegotour" />
                 </button>
 
                 <!-- User dropdown menu -->
@@ -338,7 +338,7 @@
                   :aria-expanded="open ? 'true' : 'false'"
                   class="block transition-opacity duration-200 rounded-full dark:opacity-75 dark:hover:opacity-100 focus:outline-none focus:ring dark:focus:opacity-100">
                   <span class="sr-only">User menu</span>
-                  <img class="w-10 h-10 rounded-full" src="./public/build/images/wegotour.png" alt="pasabar" />
+                  <img class="w-10 h-10 rounded-full" src="./public/build/images/wegotour.png" alt="Wegotour" />
                 </button>
 
                 <!-- User dropdown menu -->
@@ -411,7 +411,7 @@
                 </div>
               </div>
 
-              <!--  Tempat Catalog -->
+              <!--  Tempat Ticket -->
               <div x-data="{ isActive: false, open: false }">
                 <!-- active classes 'bg-primary-100 dark:bg-primary' -->
                 <a href="./ticket.html"
@@ -427,7 +427,7 @@
                       </path>
                     </svg>
                   </span>
-                  <span class="ml-2 text-sm"> Catalog </span>
+                  <span class="ml-2 text-sm"> Ticket </span>
                   </span>
                 </a>
                 <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components">
@@ -493,7 +493,7 @@
                     <div class="dialog-overlay" x-on:click="isFormOpen = false"></div>
                     <div class="dialog-content">
                       <!-- Form input di sini -->
-                      <form id="newCatalogForm" action="#" method="POST" class="p-6">
+                      <form id="newTicketForm" action="#" method="POST" class="p-6">
                         <label for="newNomorID" class="font-semibold text-gray-800">Nomor ID</label>
                         <input type="text" id="newNomorID" name="newNomorID" class="w-full mb-4 p-2 border text-black"
                           required>
@@ -550,7 +550,7 @@
                         <th class="py-3 px-6 text-left">Actions</th>
                       </tr>
                     </thead>
-                    <tbody class="text-gray-600 text-sm font-light" id="CatalogDataBody">
+                    <tbody class="text-gray-600 text-sm font-light" id="TicketDataBody">
                       <!-- Di sini akan ditambahkan baris-baris data oleh JavaScript -->
                     </tbody>
                   </table>
@@ -625,7 +625,7 @@
                     </div>
                     <div class="flex-1 overflow-hidden">
                       <h5 class="text-sm font-semibold text-gray-600 dark:text-light">
-                        "Pasabar Dashboard"
+                        "Wegotour Dashboard Admin"
                       </h5>
                       <p class="text-sm font-normal text-gray-400 truncate dark:text-primary-lighter">
                         Looks like there might be a new theme soon
@@ -652,7 +652,7 @@
                     </div>
                     <div class="flex-1 overflow-hidden">
                       <h5 class="text-sm font-semibold text-gray-600 dark:text-light">
-                        Pasabar Dashboard v0.0.2 was released
+                        Wegotour Dashboard Admin v1.0.0 was released
                       </h5>
                       <p class="text-sm font-normal text-gray-400 truncate dark:text-primary-lighter">
                         Successful new version was released
@@ -680,7 +680,7 @@
                       </div>
                       <div class="flex-1 overflow-hidden">
                         <h5 class="text-sm font-semibold text-gray-600 dark:text-light">
-                          "Pasabar Dashboard"
+                          "Wegotour Dashboard Admin"
                         </h5>
                         <p class="text-sm font-normal text-gray-400 truncate dark:text-primary-lighter">
                           Looks like there might be a new theme soon
@@ -752,10 +752,6 @@
     <script src="../build/js/script.js"></script>
     <script src="../build/js/main.js"></script>
 
-
-
-    <!-- <script type="module" src="/js/cont_catalog.js"></script>
-    <script type="module" src="/js/cont_insetcatalog.js"></script> -->
     <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.19/jsadmin/controller/controllerTicket.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.19/jsadmin/controller/controllerLogout.js">
     </script>
