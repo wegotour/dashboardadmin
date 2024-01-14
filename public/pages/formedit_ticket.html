@@ -78,6 +78,30 @@
               </div>
             </div>
 
+            <!--  Tempat Wisata -->
+            <div x-data="{ isActive: false, open: false }">
+              <!-- active classes 'bg-primary-100 dark:bg-primary' -->
+              <a href="./wisata.html"
+                class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
+                :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button" aria-haspopup="true"
+                :aria-expanded="(open || isActive) ? 'true' : 'false'">
+                <span aria-hidden="true">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      d="M16.9497 11.9497C18.7347 10.1648 19.3542 7.65558 18.8081 5.36796L21.303 4.2987C21.5569 4.18992 21.8508 4.30749 21.9596 4.56131C21.9862 4.62355 22 4.69056 22 4.75827V19L15 22L9 19L2.69696 21.7013C2.44314 21.8101 2.14921 21.6925 2.04043 21.4387C2.01375 21.3765 2 21.3094 2 21.2417V7L5.12892 5.65904C4.70023 7.86632 5.34067 10.2402 7.05025 11.9497L12 16.8995L16.9497 11.9497ZM15.5355 10.5355L12 14.0711L8.46447 10.5355C6.51184 8.58291 6.51184 5.41709 8.46447 3.46447C10.4171 1.51184 13.5829 1.51184 15.5355 3.46447C17.4882 5.41709 17.4882 8.58291 15.5355 10.5355Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="ml-2 text-sm"> Wisata </span>
+                </span>
+              </a>
+              <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components">
+                <!-- active & hover classes 'text-gray-700 dark:text-light' -->
+                <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
+              </div>
+            </div>
+
             <!--  Tempat Ticket -->
             <div x-data="{ isActive: false, open: false }">
               <!-- active classes 'bg-primary-100 dark:bg-primary' -->
@@ -102,6 +126,32 @@
                 <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
               </div>
             </div>
+
+            <!-- Restaurant -->
+            <div x-data="{ isActive: false, open: false }">
+              <!-- active classes 'bg-primary-100 dark:bg-primary' -->
+              <a href="./restaurant.html"
+                class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
+                :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button" aria-haspopup="true"
+                :aria-expanded="(open || isActive) ? 'true' : 'false'">
+                <span aria-hidden="true">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M14.88,11.53L13.41,13L20.29,19.88L18.88,21.29L12,14.41L5.12,21.29L3.71,19.88L13.47,10.12C12.76,8.59 13.26,6.44 14.85,4.85C16.76,2.93 19.5,2.57 20.96,4.03C22.43,5.5 22.07,8.24 20.15,10.15C18.56,11.74 16.41,12.24 14.88,11.53Z" />
+                  </svg>
+                </span>
+                <span class="ml-2 text-sm"> Restaurant </span>
+                <span aria-hidden="true" class="ml-auto">
+                  <!-- active class 'rotate-180' -->
+                </span>
+              </a>
+              <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Pages">
+                <!-- active & hover classes 'text-gray-700 dark:text-light' -->
+                <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
+              </div>
+            </div>
+      </aside>
 
       <div class="flex-1 h-full overflow-x-hidden overflow-y-auto">
         <!-- Navbar -->
@@ -312,6 +362,30 @@
                 </div>
               </div>
 
+              <!--  Tempat Wisata -->
+              <div x-data="{ isActive: false, open: false }">
+                <!-- active classes 'bg-primary-100 dark:bg-primary' -->
+                <a href="./wisata.html"
+                  class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
+                  :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button" aria-haspopup="true"
+                  :aria-expanded="(open || isActive) ? 'true' : 'false'">
+                  <span aria-hidden="true">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        d="M16.9497 11.9497C18.7347 10.1648 19.3542 7.65558 18.8081 5.36796L21.303 4.2987C21.5569 4.18992 21.8508 4.30749 21.9596 4.56131C21.9862 4.62355 22 4.69056 22 4.75827V19L15 22L9 19L2.69696 21.7013C2.44314 21.8101 2.14921 21.6925 2.04043 21.4387C2.01375 21.3765 2 21.3094 2 21.2417V7L5.12892 5.65904C4.70023 7.86632 5.34067 10.2402 7.05025 11.9497L12 16.8995L16.9497 11.9497ZM15.5355 10.5355L12 14.0711L8.46447 10.5355C6.51184 8.58291 6.51184 5.41709 8.46447 3.46447C10.4171 1.51184 13.5829 1.51184 15.5355 3.46447C17.4882 5.41709 17.4882 8.58291 15.5355 10.5355Z">
+                      </path>
+                    </svg>
+                  </span>
+                  <span class="ml-2 text-sm"> Wisata </span>
+                  </span>
+                </a>
+                <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components">
+                  <!-- active & hover classes 'text-gray-700 dark:text-light' -->
+                  <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
+                </div>
+              </div>
+
               <!--  Tempat Ticket -->
               <div x-data="{ isActive: false, open: false }">
                 <!-- active classes 'bg-primary-100 dark:bg-primary' -->
@@ -336,6 +410,32 @@
                   <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
                 </div>
               </div>
+
+              <!-- Restaurant -->
+              <div x-data="{ isActive: false, open: false }">
+                <!-- active classes 'bg-primary-100 dark:bg-primary' -->
+                <a href="./restaurant.html"
+                  class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
+                  :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button" aria-haspopup="true"
+                  :aria-expanded="(open || isActive) ? 'true' : 'false'">
+                  <span aria-hidden="true">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M14.88,11.53L13.41,13L20.29,19.88L18.88,21.29L12,14.41L5.12,21.29L3.71,19.88L13.47,10.12C12.76,8.59 13.26,6.44 14.85,4.85C16.76,2.93 19.5,2.57 20.96,4.03C22.43,5.5 22.07,8.24 20.15,10.15C18.56,11.74 16.41,12.24 14.88,11.53Z" />
+                    </svg>
+                  </span>
+                  <span class="ml-2 text-sm">Restaurant</span>
+                  <span aria-hidden="true" class="ml-auto">
+                    <!-- active class 'rotate-180' -->
+                  </span>
+                </a>
+                <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Pages">
+                  <!-- active & hover classes 'text-gray-700 dark:text-light' -->
+                  <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
+                </div>
+              </div>
+        </header>
 
         <!-- Main content -->
         <main x-data="{ isFormOpen: false, isUpdateFormOpen:false }">
@@ -582,7 +682,7 @@
     <script src="../build/js/script.js"></script>
     <script src="../build/js/main.js"></script>
 
-    <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.25/jsadmin/controller/controllerUpdateTicket.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.27/jsadmin/controller/controllerUpdateTicket.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.25/jsadmin/controller/controllerLogout.js">
     </script>
 </body>
