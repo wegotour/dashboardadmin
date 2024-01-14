@@ -489,7 +489,7 @@
                     </button>
                   </div>
                   <!-- Modal insert-->
-                  <div id="newTicketForm" x-show="isFormOpen" class="dialog">
+                  <div id="dialog" x-show="isFormOpen" class="dialog">
                     <div class="dialog-overlay" x-on:click="isFormOpen = false"></div>
                     <div class="dialog-content">
                       <!-- Form input di sini -->
@@ -505,6 +505,10 @@
                         <label for="newDeskripsi" class="font-semibold text-gray-800">Deskripsi</label>
                         <textarea id="newDeskripsi" name="new" class="w-full mb-4 p-2 border text-black"
                           required></textarea>
+
+                          <label for="newLokasi" class="font-semibold text-gray-800">Lokasi</label>
+                          <textarea id="newLokasi" name="new" class="w-full mb-4 p-2 border text-black"
+                            required></textarea>
 
                         <label for="newImage" class="font-semibold text-gray-800">Image URL</label>
                         <input type="url" id="newImage" name="newImage" class="w-full mb-4 p-2 border text-black"
@@ -540,6 +544,7 @@
                         <th class="py-3 px-6 text-left">Nomor ID</th>
                         <th class="py-3 px-6 text-left">Title</th>
                         <th class="py-3 px-6 text-left">Deskripsi</th>
+                        <th class="py-3 px-6 text-left">Lokasi</th>
                         <th class="py-3 px-6 text-left">Image</th>
                         <th class="py-3 px-6 text-left">Status</th>
                         <th class="py-3 px-6 text-left">Actions</th>
@@ -747,10 +752,14 @@
     <script src="../build/js/script.js"></script>
     <script src="../build/js/main.js"></script>
 
-    <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.25/jsadmin/controller/controllerTicket.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.25/jsadmin/controller/controllerLogout.js">
-    </script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.25/jsadmin/controller/controllerInsertTicket.js"></script>
-</body>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.26/jsadmin/controller/controllerTicket.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.25/jsadmin/controller/controllerLogout.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.26/jsadmin/controller/controllerUpdateTicket.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.26/jsadmin/controller/controllerInsertTicket.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.25/jsadmin/controller/controllerLogin.js"></script>
+    <script type="module" src="controllerInsert.js"></script>
+    <script type="module" src="controllerticket.js"></script>
+    <script type="module" src="controllerupdate.js"></script>
+  </body>
 
 </html>
