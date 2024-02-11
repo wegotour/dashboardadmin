@@ -69,7 +69,7 @@ const getTokenFromCookies = (cookieName) => {
     const requestOptions = {
       method: 'DELETE',
       headers: myHeaders,
-      body: JSON.stringify({ nomorid: nomorId }),
+      body: JSON.stringify({ _id: nomorId }),
       redirect: 'follow',
     }
   
@@ -115,16 +115,16 @@ const getTokenFromCookies = (cookieName) => {
   }
   
   const editTicket = (nomorId) => {
-    window.location.href = `formedit_ticket.html?nomorid=${nomorId}`
+    window.location.href = `formedit_ticket.html?_id=${nomorId}`
   }
   // Event listener to handle clicks on the table
   document.getElementById('TicketDataBody').addEventListener('click', (event) => {
     const target = event.target
     if (target.classList.contains('edit-link')) {
-      const nomorId = parseInt(target.getAttribute('data-nomorid'))
+      const nomorId = parseInt(target.getAttribute('data-_id'))
       editTicket(nomorId)
     } else if (target.classList.contains('delete-link')) {
-      const nomorId = parseInt(target.getAttribute('data-nomorid'))
+      const nomorId = parseInt(target.getAttribute('data-_id'))
       deleteTicketHandler(nomorId)
     }
   })
@@ -138,16 +138,18 @@ const getTokenFromCookies = (cookieName) => {
       ticketData.forEach((item) => {
         const newRow = document.createElement('tr')
         newRow.innerHTML = `
-          <td class="px-4 py-3">${item.nomorid}</td>
-          <td class="px-4 py-3">${item.title}</td>
-          <td class="px-4 py-3">${item.description}</td>
+          <td class="px-4 py-3">${item._id}</td>
+          <td class="px-4 py-3">${item.namaticket}</td>
+          <td class="px-4 py-3">${item.harga}</td>
+          <td class="px-4 py-3">${item.namapembeli}</td>
+          <td class="px-4 py-3">${item.email}</td>
+          <td class="px-4 py-3">${item.alamat}</td>
+          <td class="px-4 py-3">${item.nohp}</td>
+          <td class="px-4 py-3">${item.quantity}</td>
+          <td class="px-4 py-3">${item.total}</td>
           <td class="px-4 py-3">
-            <img src="${item.image}" alt="Ticket Image" style="max-width: 100px; max-height: 100px;">
-          </td>
-          <td class="px-4 py-3">${item.status ? 'Active' : 'Inactive'}</td>
-          <td class="px-4 py-3">
-            <a href="#" class="edit-link" data-nomorid="${item.nomorid}">Edit</a>
-            <a href="#" class="delete-link" data-nomorid="${item.nomorid}">Delete</a>
+            <a href="#" class="edit-link" data-_id="${item._id}">Edit</a>
+            <a href="#" class="delete-link" data-_id="${item._id}">Delete</a>
           </td>
         `
   

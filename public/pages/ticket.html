@@ -432,20 +432,40 @@
                     <div class="dialog-content">
                       <!-- Form input di sini -->
                       <form id="newTicketForm" action="#" method="POST" class="p-6">
-                        <label for="newNomorID" class="font-semibold text-gray-800">Nomor ID</label>
-                        <input type="text" id="newNomorID" name="newNomorID" class="w-full mb-4 p-2 border text-black"
+                        <label for="new_id" class="font-semibold text-gray-800">_id</label>
+                        <input type="text" id="new_id" name="new_id" class="w-full mb-4 p-2 border text-black"
                           required>
 
-                        <label for="newTitle" class="font-semibold text-gray-800">Title</label>
-                        <input type="text" id="newTitle" name="newTitle" class="w-full mb-4 p-2 border text-black"
+                        <label for="newTicket" class="font-semibold text-gray-800">Nama Ticket</label>
+                        <input type="text" id="newTicket" name="newTicket" class="w-full mb-4 p-2 border text-black"
                           required>
 
-                        <label for="newDeskripsi" class="font-semibold text-gray-800">Deskripsi</label>
-                        <textarea id="newDeskripsi" name="new" class="w-full mb-4 p-2 border text-black"
+                        <label for="newHarga" class="font-semibold text-gray-800">Harga</label>
+                        <textarea id="newHarga" name="newHarga" class="w-full mb-4 p-2 border text-black"
                           required></textarea>
 
-                        <label for="newImage" class="font-semibold text-gray-800">Image URL</label>
-                        <input type="url" id="newImage" name="newImage" class="w-full mb-4 p-2 border text-black"
+                        <label for="newPembeli" class="font-semibold text-gray-800">Nama Pembeli</label>
+                        <input type="url" id="newPembeli" name="newPembeli" class="w-full mb-4 p-2 border text-black"
+                          required>
+
+                        <label for="newEmail" class="font-semibold text-gray-800">Email</label>
+                        <input type="url" id="newEmail" name="newEmail" class="w-full mb-4 p-2 border text-black"
+                          required>
+
+                        <label for="newAlamat" class="font-semibold text-gray-800">Alamat</label>
+                        <input type="url" id="newAlamat" name="newAlamat" class="w-full mb-4 p-2 border text-black"
+                          required>
+
+                        <label for="newNohp" class="font-semibold text-gray-800">No Hp</label>
+                        <input type="url" id="newNohp" name="newNohp" class="w-full mb-4 p-2 border text-black"
+                          required>
+                        
+                        <label for="newQuantity" class="font-semibold text-gray-800">Quantity</label>
+                        <input type="url" id="newQuantity" name="newQuantity" class="w-full mb-4 p-2 border text-black"
+                          required>
+
+                        <label for="newTotal" class="font-semibold text-gray-800">Total</label>
+                        <input type="url" id="newTotal" name="newTotal" class="w-full mb-4 p-2 border text-black"
                           required>
 
                         <label for="newStatus" class="font-semibold text-gray-800">Status</label>
@@ -475,11 +495,15 @@
                   <table class="py-4 min-w-full table-auto mx-auto">
                     <thead>
                       <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                        <th class="py-3 px-6 text-left">Nomor ID</th>
-                        <th class="py-3 px-6 text-left">Title</th>
-                        <th class="py-3 px-6 text-left">Deskripsi</th>
-                        <th class="py-3 px-6 text-left">Image</th>
-                        <th class="py-3 px-6 text-left">Status</th>
+                        <th class="py-3 px-6 text-left">_id</th>
+                        <th class="py-3 px-6 text-left">Nama Ticket</th>
+                        <th class="py-3 px-6 text-left">Harga</th>
+                        <th class="py-3 px-6 text-left">Nama Pembeli</th>
+                        <th class="py-3 px-6 text-left">Email</th>
+                        <th class="py-3 px-6 text-left">Alamat</th>
+                        <th class="py-3 px-6 text-left">No Hp</th>
+                        <th class="py-3 px-6 text-left">Quantity</th>
+                        <th class="py-3 px-6 text-left">Total</th>
                         <th class="py-3 px-6 text-left">Actions</th>
                       </tr>
                     </thead>
@@ -685,11 +709,15 @@
     <script src="../build/js/script.js"></script>
     <script src="../build/js/main.js"></script>
 
-    <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.27/jsadmin/controller/controllerTicket.js"></script>
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.27/jsadmin/controller/controllerTicket.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.25/jsadmin/controller/controllerLogout.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.27/jsadmin/controller/controllerUpdateTicket.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.27/jsadmin/controller/controllerInsertTicket.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.25/jsadmin/controller/controllerLogin.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/wegotour/js_wgt@0.0.25/jsadmin/controller/controllerLogin.js"></script> -->
+
+    <!-- local script -->
+    <script type="module" src="../controller/controllerTicket.js"></script>
+
   </body>
 
 </html>
