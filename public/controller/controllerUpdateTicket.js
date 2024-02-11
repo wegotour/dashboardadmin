@@ -20,7 +20,7 @@ const getTokenFromCookies = (cookieName) => {
     })
   }
   
-  const searchnomorById = async (nomorId) => {
+  const searchnomorById = async (No) => {
     const token = getTokenFromCookies('Login')
   
     if (!token) {
@@ -28,7 +28,7 @@ const getTokenFromCookies = (cookieName) => {
       return
     }
   
-    const URLUpdateTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/updatedataticket'
+    const URLUpdateTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/updatedatatransaksi'
   
     const myHeaders = new Headers()
     myHeaders.append('Login', token)
@@ -36,7 +36,7 @@ const getTokenFromCookies = (cookieName) => {
     const requestOptions = {
       method: 'POST',
       headers: myHeaders,
-      body: JSON.stringify({ nomorid: nomorId }),
+      body: JSON.stringify({ no: No }),
       redirect: 'follow',
     }
   
@@ -60,7 +60,7 @@ const getTokenFromCookies = (cookieName) => {
       document.getElementById(id).value = value
     }
   
-    setValue('NomorIdInput', ticketData.nomorid)
+    setValue('NoInput', ticketData.no)
     setValue('TitleInput', ticketData.title)
     setValue('DeskripsiInput', ticketData.description)
     setValue('ImageInput', ticketData.image)
@@ -79,7 +79,7 @@ const getTokenFromCookies = (cookieName) => {
       return
     }
   
-    const URLUpdateTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/updatedataticket'
+    const URLUpdateTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/updatedatatransaksi'
   
     const myHeaders = new Headers()
     myHeaders.append('Login', token)
@@ -91,7 +91,7 @@ const getTokenFromCookies = (cookieName) => {
       method: 'PUT',
       headers: myHeaders,
       body: JSON.stringify({
-        nomorid: parseInt(document.getElementById('NomorIdInput').value),
+        no: parseInt(document.getElementById('NomorIdInput').value),
         title: document.getElementById('TitleInput').value,
         description: document.getElementById('DeskripsiInput').value,
         image: document.getElementById('ImageInput').value,

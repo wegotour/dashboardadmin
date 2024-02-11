@@ -52,7 +52,7 @@ const getTokenFromCookies = (cookieName) => {
     }
   }
   
-  const deleteTicket = async (nomorId) => {
+  const deleteTicket = async (No) => {
     const token = getTokenFromCookies('Login')
   
     if (!token) {
@@ -69,7 +69,7 @@ const getTokenFromCookies = (cookieName) => {
     const requestOptions = {
       method: 'DELETE',
       headers: myHeaders,
-      body: JSON.stringify({ _id: nomorId }),
+      body: JSON.stringify({ no: No }),
       redirect: 'follow',
     }
   
@@ -98,7 +98,7 @@ const getTokenFromCookies = (cookieName) => {
   }
   
   // Function to handle the delete confirmation
-  const deleteTicketHandler = (nomorId) => {
+  const deleteTicketHandler = (No) => {
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -109,23 +109,23 @@ const getTokenFromCookies = (cookieName) => {
       confirmButtonText: 'Yes, delete it!',
     }).then((result) => {
       if (result.isConfirmed) {
-        deleteTicket(nomorId)
+        deleteTicket(No)
       }
     })
   }
   
-  const editTicket = (nomorId) => {
-    window.location.href = `formedit_ticket.html?_id=${nomorId}`
+  const editTicket = (No) => {
+    window.location.href = `formedit_ticket.html?no=${No}`
   }
   // Event listener to handle clicks on the table
   document.getElementById('TicketDataBody').addEventListener('click', (event) => {
     const target = event.target
     if (target.classList.contains('edit-link')) {
-      const nomorId = parseInt(target.getAttribute('data-_id'))
-      editTicket(nomorId)
+      const No = parseInt(target.getAttribute('data-no'))
+      editTicket(No)
     } else if (target.classList.contains('delete-link')) {
-      const nomorId = parseInt(target.getAttribute('data-_id'))
-      deleteTicketHandler(nomorId)
+      const No = parseInt(target.getAttribute('data-no'))
+      deleteTicketHandler(No)
     }
   })
   
@@ -138,18 +138,19 @@ const getTokenFromCookies = (cookieName) => {
       ticketData.forEach((item) => {
         const newRow = document.createElement('tr')
         newRow.innerHTML = `
-          <td class="px-4 py-3">${item._id}</td>
+          <td class="px-4 py-3">${item.no}</td>
           <td class="px-4 py-3">${item.namaticket}</td>
           <td class="px-4 py-3">${item.harga}</td>
-          <td class="px-4 py-3">${item.namapembeli}</td>
-          <td class="px-4 py-3">${item.email}</td>
           <td class="px-4 py-3">${item.alamat}</td>
           <td class="px-4 py-3">${item.nohp}</td>
           <td class="px-4 py-3">${item.quantity}</td>
+          <td class="px-4 py-3">${item.nohp}</td>
           <td class="px-4 py-3">${item.total}</td>
+          <td class="px-4 py-3">${item.namapembeli}</td>
+          <td class="px-4 py-3">${item.email}</td>
           <td class="px-4 py-3">
-            <a href="#" class="edit-link" data-_id="${item._id}">Edit</a>
-            <a href="#" class="delete-link" data-_id="${item._id}">Delete</a>
+            <a href="#" class="edit-link" data-no="${item.no}">Edit</a>
+            <a href="#" class="delete-link" data-no="${item.no}">Delete</a>
           </td>
         `
   

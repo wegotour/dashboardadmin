@@ -432,8 +432,8 @@
                     <div class="dialog-content">
                       <!-- Form input di sini -->
                       <form id="newTicketForm" action="#" method="POST" class="p-6">
-                        <label for="new_id" class="font-semibold text-gray-800">_id</label>
-                        <input type="text" id="new_id" name="new_id" class="w-full mb-4 p-2 border text-black"
+                        <label for="newNo" class="font-semibold text-gray-800">No</label>
+                        <input type="text" id="newNo" name="newNo" class="w-full mb-4 p-2 border text-black"
                           required>
 
                         <label for="newTicket" class="font-semibold text-gray-800">Nama Ticket</label>
@@ -444,22 +444,14 @@
                         <textarea id="newHarga" name="newHarga" class="w-full mb-4 p-2 border text-black"
                           required></textarea>
 
-                        <label for="newPembeli" class="font-semibold text-gray-800">Nama Pembeli</label>
-                        <input type="url" id="newPembeli" name="newPembeli" class="w-full mb-4 p-2 border text-black"
-                          required>
-
-                        <label for="newEmail" class="font-semibold text-gray-800">Email</label>
-                        <input type="url" id="newEmail" name="newEmail" class="w-full mb-4 p-2 border text-black"
-                          required>
-
                         <label for="newAlamat" class="font-semibold text-gray-800">Alamat</label>
                         <input type="url" id="newAlamat" name="newAlamat" class="w-full mb-4 p-2 border text-black"
                           required>
 
-                        <label for="newNohp" class="font-semibold text-gray-800">No Hp</label>
-                        <input type="url" id="newNohp" name="newNohp" class="w-full mb-4 p-2 border text-black"
+                        <label for="newNoHp" class="font-semibold text-gray-800">No Hp</label>
+                        <input type="url" id="newNoHp" name="newNoHp" class="w-full mb-4 p-2 border text-black"
                           required>
-                        
+
                         <label for="newQuantity" class="font-semibold text-gray-800">Quantity</label>
                         <input type="url" id="newQuantity" name="newQuantity" class="w-full mb-4 p-2 border text-black"
                           required>
@@ -467,12 +459,14 @@
                         <label for="newTotal" class="font-semibold text-gray-800">Total</label>
                         <input type="url" id="newTotal" name="newTotal" class="w-full mb-4 p-2 border text-black"
                           required>
+                        
+                        <label for="newPembeli" class="font-semibold text-gray-800">Nama Pembeli</label>
+                        <input type="url" id="newPembeli" name="newPembeli" class="w-full mb-4 p-2 border text-black"
+                          required>
 
-                        <label for="newStatus" class="font-semibold text-gray-800">Status</label>
-                        <select id="newStatus" name="newStatus" class="w-full mb-4 p-2 border text-black" required>
-                          <option value="active">Active</option>
-                          <option value="inactive">Inactive</option>
-                        </select>
+                        <label for="newEmail" class="font-semibold text-gray-800">Email</label>
+                        <input type="url" id="newEmail" name="newEmail" class="w-full mb-4 p-2 border text-black"
+                          required>
 
                         <button type="submit" id="submit"
                           class="py-2 px-4 inline-flex items-center gap-2 rounded-md border border-transparent font-semibold bg-gradient-to-tl from-blue-600 to-violet-600 text-white text-sm">
@@ -495,15 +489,15 @@
                   <table class="py-4 min-w-full table-auto mx-auto">
                     <thead>
                       <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                        <th class="py-3 px-6 text-left">_id</th>
+                        <th class="py-3 px-6 text-left">No</th>
                         <th class="py-3 px-6 text-left">Nama Ticket</th>
                         <th class="py-3 px-6 text-left">Harga</th>
-                        <th class="py-3 px-6 text-left">Nama Pembeli</th>
-                        <th class="py-3 px-6 text-left">Email</th>
                         <th class="py-3 px-6 text-left">Alamat</th>
                         <th class="py-3 px-6 text-left">No Hp</th>
                         <th class="py-3 px-6 text-left">Quantity</th>
                         <th class="py-3 px-6 text-left">Total</th>
+                        <th class="py-3 px-6 text-left">Nama Pembeli</th>
+                        <th class="py-3 px-6 text-left">Email</th>
                         <th class="py-3 px-6 text-left">Actions</th>
                       </tr>
                     </thead>
